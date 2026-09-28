@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>P&G Mock Interview · English 20 นาที</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai:wght@400;500;600;700&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#0b2a55; --navy-2:#123a70; --blue:#0a57b8; --red:#c8102e;
+  --bg:#f5f7fb; --card:#ffffff; --ink:#1a2233; --muted:#5b6679; --line:#dfe4ee;
+  --tip-bg:#fff7e0; --tip-line:#f0c34e; --mark:#ffe99a; --chip:#e8f0fb; --chip-ink:#0a4a9c;
+  --warn-bg:#fdecee; --warn-line:#e5a0aa;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#0e1522; --card:#162033; --ink:#e6ebf3; --muted:#9aa6ba; --line:#28344a;
+    --tip-bg:#2c2614; --tip-line:#8a6d1c; --mark:#5a4a12; --chip:#1d3050; --chip-ink:#9cc2f5;
+    --warn-bg:#3a1b21; --warn-line:#7a3440; --blue:#6ea8f0;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0e1522; --card:#162033; --ink:#e6ebf3; --muted:#9aa6ba; --line:#28344a;
+  --tip-bg:#2c2614; --tip-line:#8a6d1c; --mark:#5a4a12; --chip:#1d3050; --chip-ink:#9cc2f5;
+  --warn-bg:#3a1b21; --warn-line:#7a3440; --blue:#6ea8f0;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 16px);scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);
+  font-family:"IBM Plex Sans Thai","IBM Plex Sans",Tahoma,"Leelawadee UI",sans-serif;line-height:1.75;font-size:16px}
+.layout{display:grid;grid-template-columns:260px 1fr;min-height:100vh}
+aside{background:var(--navy);color:#dbe6f7;padding:24px 18px;position:sticky;top:0;height:100vh;overflow-y:auto}
+.brand{display:flex;align-items:center;gap:10px;margin-bottom:22px}
+.logo{background:var(--red);color:#fff;font-weight:700;border-radius:8px;padding:6px 8px;font-size:15px}
+.brand small{display:block;color:#9fb5d6;font-size:12px}
+aside h4{font-size:13px;color:#9fb5d6;margin:18px 0 8px;font-weight:600}
+aside a{display:flex;gap:10px;color:#dbe6f7;text-decoration:none;font-size:14px;padding:6px 8px;border-radius:6px}
+aside a:hover,aside a:focus-visible{background:var(--navy-2);outline:none}
+aside a span{color:#9fb5d6;min-width:44px;font-variant-numeric:tabular-nums}
+aside .note{font-size:12.5px;color:#9fb5d6;margin-top:22px;line-height:1.6}
+main{padding:36px clamp(16px,4vw,56px) 80px;max-width:980px}
+.kicker{color:var(--red);font-weight:600;font-size:14px}
+h1{font-size:clamp(26px,4vw,34px);line-height:1.3;margin:6px 0 8px}
+.lede{color:var(--muted);max-width:70ch;margin:0 0 18px}
+.warn{background:var(--warn-bg);border:1px solid var(--warn-line);border-radius:10px;padding:14px 16px;margin:0 0 22px;font-size:15px}
+.warn b{color:var(--red)}
+.legend{font-size:14px;color:var(--muted);margin:0 0 20px}
+mark{background:var(--mark);color:inherit;padding:0 3px;border-radius:3px}
+h2{font-size:20px;margin:40px 0 14px;display:flex;justify-content:space-between;align-items:baseline;border-bottom:2px solid var(--navy);padding-bottom:6px}
+:root[data-theme="dark"] h2{border-color:var(--blue)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) h2{border-color:var(--blue)}}
+h2 small{font-size:13px;color:var(--muted);font-weight:500}
+.stories{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px}
+.story{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--blue);border-radius:8px;padding:12px 14px;font-size:14.5px}
+.story b{display:block;font-size:15px;margin-bottom:2px}
+.story .code{color:var(--chip-ink);font-weight:600;font-size:13px}
+.story ul{margin:6px 0 0;padding-left:18px;color:var(--muted)}
+.tools{display:flex;flex-wrap:wrap;gap:10px;margin:26px 0 6px;position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);padding:10px 0;z-index:2}
+.tools input{flex:1 1 260px;padding:10px 14px;border:1px solid var(--line);border-radius:8px;background:var(--card);color:var(--ink);font:inherit}
+.tools button{padding:9px 14px;border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:8px;font:inherit;font-size:14px;cursor:pointer}
+.tools button:hover{border-color:var(--blue)}
+:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+details{background:var(--card);border:1px solid var(--line);border-radius:10px;margin:8px 0}
+summary{list-style:none;cursor:pointer;display:flex;gap:12px;align-items:flex-start;padding:12px 16px;font-weight:500}
+summary::-webkit-details-marker{display:none}
+summary .q{background:var(--navy);color:#fff;font-size:12.5px;font-weight:600;border-radius:5px;padding:2px 7px;margin-top:3px;flex:none;font-variant-numeric:tabular-nums}
+summary .t{flex:1}
+summary::after{content:"▾";color:var(--muted);transition:transform .15s}
+details[open] summary::after{transform:rotate(180deg)}
+@media (prefers-reduced-motion:reduce){summary::after{transition:none}}
+.body{padding:0 18px 16px 18px;border-top:1px solid var(--line)}
+.uses{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 6px}
+.chip{background:var(--chip);color:var(--chip-ink);font-size:12.5px;border-radius:999px;padding:2px 10px;font-weight:500}
+.ans{margin:8px 0 0;max-width:75ch}
+.tip{background:var(--tip-bg);border-left:3px solid var(--tip-line);padding:8px 12px;border-radius:6px;font-size:14.5px;margin-top:12px;max-width:75ch}
+.empty{color:var(--muted);padding:20px 0;display:none}
+@media (max-width:860px){
+  .layout{grid-template-columns:1fr}
+  aside{position:static;height:auto}
+  aside nav{display:grid;grid-template-columns:1fr 1fr;gap:2px}
+}
+</style>
+</head>
+<body>
+<div class="layout">
+<aside>
+  <div class="brand"><span class="logo">P&amp;G</span><div>Mock Interview<small>English · 20 minutes</small></div></div>
+  <h4>ลำดับการสัมภาษณ์</h4>
+  <nav id="nav"></nav>
+  <p class="note">ซ้อมพูดออกเสียงพร้อมจับเวลา ไม่ต้องท่องคำต่อคำ จำโครง STAR และตัวเลขสำคัญก็พอ ส่วนที่ไฮไลต์คือรายละเอียดที่ต้องเติมจากเรื่องจริง</p>
+</aside>
+<main>
+  <div class="kicker">Procter &amp; Gamble · English interview practice</div>
+  <h1>ชุดซ้อมสัมภาษณ์ภาษาอังกฤษ 20 นาที</h1>
+  <p class="lede">จำลองการสัมภาษณ์จริงตั้งแต่ต้นจนจบ 11 ช่วง รวมประมาณ 20 นาที คำตอบใช้เรื่องจากเรซูเม่และหลักคิดของคุณ แต่ละข้อมีเวลาเป้าหมาย คำถามต่อที่มักตามมา และทิปภาษาไทย</p>
+  <div class="warn"><b>ก่อนสัมภาษณ์:</b> แก้ Objective ในเรซูเม่ที่ยังเขียนว่า Asset World Corporation และเติมส่วนที่ไฮไลต์ด้วยเรื่องจริง ผู้สัมภาษณ์ P&amp;G มักถามลงรายละเอียดว่า “what exactly did <em>you</em> do?”</div>
+  <div class="tools">
+    <button id="openAll">เปิดทั้งหมด</button>
+    <button id="closeAll">ปิดทั้งหมด</button>
+    <button id="timerBtn">เริ่มจับเวลา 20:00</button>
+  </div>
+  <div id="content"></div>
+</main>
+</div>
+<script>
+const S={ME:"ตัวตน & หลักคิด",HTE:"Hack the Energy",ISK:"Intania Starter Kit",BQ:"BuekQueue",EV:"EV Forecasting",BCG:"BCG Case",GEN:"Situational"};
+const steps=[
+{t:"0:00–1:00",time:"1 นาที",q:"Opening: “How are you today?” / small talk",uses:[],
+a:`Thank you for having me. I'm doing well, and I'm really glad to have the chance to talk with you today. I've been looking forward to learning more about the team and the role.`,
+f:[],tip:`ยิ้ม สบตา ตอบสั้นๆ แล้วรอให้ผู้สัมภาษณ์นำ ไม่ต้องเล่าเรื่องยาว`},
+{t:"1:00–2:30",time:"1.5 นาที",q:"Tell me about yourself.",uses:["ME","HTE","ISK","BQ","EV","BCG"],
+a:`I'm Jinasta, but please call me Bonus. I'm a third-year Industrial Engineering student at Chulalongkorn University, with a GPAX of 3.68.<br><br>In my first years at university, I focused almost entirely on my studies. Then I asked myself: when I graduate and look back, will I regret anything? I realized I wanted to do work that matters to other people, not just submit assignments and move on.<br><br>Since then, I served as Academic Division Chairperson for Hack the Energy Chula, designing the case topics and judging criteria for a two-month hackathon with 60 teams. Now I chair the Intania Starter Kit, an academic-support program that reached about 769 students. On the analytical side, I built a regression model to forecast EV charging-station growth in Thailand, and I developed BuekQueue, a digital queue system projected to cut wait times by around 60%. My team also placed top 4 out of 110 teams in the Bio-Circular-Green Case Competition.<br><br>That mix of data, consumers, and operations is exactly why I'm excited about P&G.`,
+f:[],tip:`ย่อหน้าที่มีตัวเลขเยอะ ให้พูดช้าลง ถ้าผู้สัมภาษณ์ดูรีบ ตัด EV และ BCG ออกได้`},
+{t:"2:30–4:00",time:"1.5 นาที",q:"Why P&G, and why this role?",uses:["ME","BQ","BCG"],
+a:`Two reasons. First, I want my work to make a real difference to people. In my student activities, what motivated me most was seeing that what we built actually helped someone. P&G does that at a much bigger scale, because its products are part of millions of people's daily lives.<br><br>Second, P&G puts the consumer at the center of decisions, and that's how I like to work. When I built BuekQueue, I started by mapping the customer journey and finding pain points before writing any code. In the BCG case competition, our team had to prove that customers would actually value and adopt our product, not just that it was a good idea.<br><br>This role, <mark>[role name]</mark>, is where my IE background, my data skills, and my interest in consumers come together. And I've heard P&G gives people real responsibility early, which is how I've grown the most.`,
+f:["What P&G brand do you use, and what would you improve about it? — เตรียม <mark>[แบรนด์ + ข้อสังเกต 1 ข้อ]</mark>"],
+tip:`ถ้าพูดถึงแบรนด์ที่ใช้จริงได้ จะน่าเชื่อกว่าพูดถึงบริษัทแบบกว้างๆ`},
+{t:"4:00–6:30",time:"2.5 นาที",q:"Tell me about a time you led a team to achieve a result.",uses:["HTE"],
+a:`<b>Situation:</b> From May to July 2026, I was Academic Division Chairperson for Hack the Energy Chula, a two-month hackathon with 60 teams.<br><b>Task:</b> My team had to design the case topics and the judging criteria. If the criteria were unclear, judges from different backgrounds would score inconsistently, and that wouldn't be fair to the teams.<br><b>Action:</b> I planned backwards from the launch date and set weekly milestones. I split the work by each member's strengths, so the case topics and the criteria were developed in parallel. For the criteria, I wrote a clear description for every score level. I also handled the coordination with other university divisions, so my team could focus on the content.<br><b>Result:</b> Everything was ready on time, and the event ran smoothly for the full two months. <mark>[Add real feedback, e.g. from judges or participants]</mark>. What I learned is that a leader's job isn't to do the most work, it's to help the whole team do its best work.`,
+f:["What would you do differently? — เช่น ส่งร่างให้ผู้เกี่ยวข้องรีวิวเร็วกว่านี้ หรือ <mark>[บทเรียนจริง]</mark>","How did you handle a team member who wasn't delivering? — <mark>[เรื่องจริงถ้ามี]</mark>"],
+tip:`พูดคำว่า “I” ให้ชัดในส่วน Action ไม่ใช่ “we” ตลอด`},
+{t:"6:30–9:00",time:"2.5 นาที",q:"Tell me about a time you used data to make a recommendation.",uses:["EV"],
+a:`<b>Situation:</b> In 2025, I worked on a project to forecast the growth of EV charging stations in Thailand.<br><b>Task:</b> The goal was to understand which factors really drive charging-station growth, so the results could support strategic planning.<br><b>Action:</b> I grouped the possible drivers into three categories: economic, policy, and infrastructure. I collected data from both public-sector and industry sources. The hardest part was that the sources used different units and time periods, so I spent a lot of time in Excel cleaning and aligning the data before modeling. Then I built a multiple-regression model in Minitab and tested which variables were significant.<br><b>Result:</b> We found that <mark>[most important variable]</mark> had the strongest effect. I translated the model into insights for planning, and I was clear about the assumptions and limitations, because I think a forecast that hides its assumptions is more dangerous than one that admits uncertainty.`,
+f:["How good was your model? — <mark>[R² หรือค่าที่ใช้วัด]</mark>","What would you add with more data? — เช่น ข้อมูลรายภูมิภาค"],
+tip:`ถ้าไม่มั่นใจตัวเลขทางสถิติ อย่าเดา พูดว่า “I'd need to check the exact figure” ดีกว่า`},
+{t:"9:00–11:30",time:"2.5 นาที",q:"Tell me about a time you improved a process or came up with something innovative.",uses:["BQ"],
+a:`<b>Situation:</b> In 2025, my team noticed that customers at <mark>[the shop / canteen]</mark> were waiting a long time, and the shop was losing sales during peak hours.<br><b>Task:</b> We wanted to reduce waiting time and help the shop serve more customers.<br><b>Action:</b> Instead of jumping straight to building an app, I first mapped the end-to-end customer journey to find where time was actually lost. The bottleneck was <mark>[ordering and waiting to be called]</mark>. So we designed a digital ordering and live-queue system, and built a working web application with a SQL database, PHP, HTML, and JavaScript, rather than just a slide concept. We focused on the core features first and tested each part step by step.<br><b>Result:</b> Based on our analysis, the system was projected to reduce wait times by about 60% and generate around 4,800 baht in additional daily revenue. Looking back, I'd pilot it with a small group of real users earlier, to validate those assumptions with real data.`,
+f:["How did you calculate the 60%? — <mark>[วิธีคำนวณจริง]</mark>","What was your specific role in the coding? — <mark>[ส่วนที่ทำเอง]</mark>"],
+tip:`ต้องพูดคำว่า “projected” ทุกครั้ง และเตรียมอธิบายวิธีคำนวณตัวเลขให้ได้ เพราะเป็นคำถามต่อที่เจอบ่อยมาก`},
+{t:"11:30–14:00",time:"2.5 นาที",q:"Tell me about a time you had a disagreement with a teammate. How did you handle it?",uses:["ME","HTE"],
+a:`<b>Situation:</b> When we were designing the judging criteria for Hack the Energy, my team disagreed. <mark>[One side wanted to focus on technical depth, the other on business feasibility.]</mark><br><b>Task:</b> We needed one set of criteria that everyone could stand behind, and we were short on time.<br><b>Action:</b> First, I asked each person to fully explain their reasoning, without anyone judging who was right. I believe most conflicts don't happen because someone is wrong, but because people see the problem from different angles, and each angle has value. I also made sure the quieter members spoke up, because sometimes the best idea comes from the person who doesn't say much. Then I brought everyone back to the goal of the event and proposed criteria that combined both views, weighted according to that goal.<br><b>Result:</b> Everyone could see their input in the final criteria, and the result was better than what any one of us would have designed alone. For me, the goal is always the best outcome, not proving who's right.`,
+f:["What if they still didn't agree? — ตัดสินตามเกณฑ์ที่ตกลงกันไว้ แล้วทุกคนเดินไปทางเดียวกัน (disagree and commit)"],
+tip:`อย่าพูดให้อีกฝ่ายดูแย่ เน้นว่าต่างคนต่างมีเหตุผล`},
+{t:"14:00–16:00",time:"2 นาที",q:"Tell me about a time you had to manage many priorities at once.",uses:["ME","HTE","ISK"],
+a:`In June and July 2026, I was chairing Hack the Energy's academic division while starting a new role on the Faculty of Engineering Student Committee, which included the Intania Starter Kit, Open House, and Job Fair. And I still had my studies.<br><br>I'm a planner by habit, so I started by putting everything into one planner and to-do list to see the whole picture. Then I prioritized with a simple rule: team commitments come first, because they affect other people's time. My studies and personal life matter just as much, but I can manage them with my own discipline. For example, I wake up early and use the mornings to review lessons every day. I also delegated tasks with clear owners and deadlines, instead of trying to do everything myself.<br><br>Both roles ran smoothly, and I kept my GPAX at 3.68.`,
+f:["Did you ever drop the ball? — ใช้เรื่องงานที่เกือบไม่ทัน <mark>[เรื่องจริง]</mark> และบอกว่าแจ้งล่วงหน้าอย่างไร"],
+tip:`ประโยค “team commitments come first because they affect other people's time” เป็นหลักคิดที่ชัด พูดให้ชัดเจน`},
+{t:"16:00–17:30",time:"1.5 นาที",q:"What is your biggest weakness?",uses:["ME"],
+a:`I tend to overthink and look at a problem from many angles before deciding. Sometimes that's a strength, but if I'm not careful, I hesitate too long and lose time or miss an opportunity. <mark>[One short real example]</mark>.<br><br>What I'm practicing now is recognizing whether a situation needs care or speed. I ask myself one question: if this decision turns out wrong, can I easily reverse it? If yes, I decide quickly and adjust later. If not, I take the time to think it through. Both approaches have their moment, and the skill is using the right one at the right time.`,
+f:[],tip:`ตัวอย่างจริงสั้นๆ หนึ่งเรื่องทำให้คำตอบน่าเชื่อขึ้นมาก เลือกเรื่องเล็กที่ไม่ได้ทำให้งานเสียหาย`},
+{t:"17:30–19:00",time:"1.5 นาที",q:"Situational: A product launch date has been announced, but manufacturing says it won't be ready until three weeks later. What would you do?",uses:["GEN"],
+a:`First, I'd get the facts from manufacturing: where exactly is the bottleneck? Is it materials, capacity, or quality? And how much could we speed it up?<br><br>Then I'd prepare options with their trade-offs. For example, we could expedite production at a higher cost, launch first in selected regions or channels, adjust the advertising plan, or move the launch date.<br><br>I'd bring this to my manager as early as possible, with options, not just the problem, because the earlier we raise it, the more choices we have. The one thing I wouldn't do is promise consumers something we can't deliver.`,
+f:["Which option would you choose? — ขึ้นกับว่าอะไรกระทบผู้บริโภคและลูกค้าร้านค้าน้อยที่สุด แล้วอธิบายเหตุผล"],
+tip:`ใช้คำศัพท์ IE อย่าง bottleneck, capacity, lead time ให้เป็นธรรมชาติ`},
+{t:"19:00–20:00",time:"1 นาที",q:"Do you have any questions for us?",uses:[],
+a:`Yes, thank you. I have two questions.<br><br>1. What does success look like for someone in this role in the first three months?<br>2. What's one thing you enjoy most about working at P&G?<br><br>Thank you again for your time. I really enjoyed our conversation, and I'm excited about the possibility of joining the team.`,
+f:["คำถามสำรอง: How does the team usually give feedback to new members?"],
+tip:`ต้องมีคำถามเสมอ ห้ามตอบว่า “No questions” และอย่าถามเรื่องเงินเดือนหรือวันหยุดในรอบนี้`}
+];
+const content=document.getElementById('content'),nav=document.getElementById('nav');
+steps.forEach((s,i)=>{
+  const a=document.createElement('a');a.href='#s'+(i+1);a.innerHTML=`<span>${s.t.split('–')[0]}</span>${i===0?'Opening':i===steps.length-1?'Your questions':'Q'+i}`;nav.appendChild(a);
+  const d=document.createElement('details');d.id='s'+(i+1);if(i<2)d.open=true;
+  d.innerHTML=`<summary><span class="q">${s.t}</span><span class="t">${s.q}</span></summary>
+  <div class="body"><div class="uses"><span class="chip" style="background:var(--tip-bg);color:inherit">⏱ ${s.time}</span>${s.uses.map(u=>`<span class="chip">${S[u]}</span>`).join('')}</div>
+  <p class="ans" lang="en">${s.a}</p>
+  ${s.f.length?`<div class="tip" style="background:var(--chip);border-color:var(--blue)"><b>คำถามต่อที่อาจเจอ</b><br>${s.f.join('<br>')}</div>`:''}
+  <div class="tip">${s.tip}</div></div>`;
+  content.appendChild(d);
+});
+document.getElementById('openAll').onclick=()=>document.querySelectorAll('details').forEach(d=>d.open=true);
+document.getElementById('closeAll').onclick=()=>document.querySelectorAll('details').forEach(d=>d.open=false);
+let left=1200,iv=null;const btn=document.getElementById('timerBtn');
+const fmt=x=>`${Math.floor(x/60)}:${String(x%60).padStart(2,'0')}`;
+btn.onclick=()=>{
+  if(iv){clearInterval(iv);iv=null;btn.textContent='ต่อ '+fmt(left);return;}
+  if(left<=0)left=1200;
+  iv=setInterval(()=>{left--;btn.textContent='หยุด '+fmt(left);if(left<=0){clearInterval(iv);iv=null;btn.textContent='หมดเวลา · เริ่มใหม่';}},1000);
+  btn.textContent='หยุด '+fmt(left);
+};
+</script>
+</body>
+</html>
